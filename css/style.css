@@ -1,9 +1,12 @@
-html, body {
-    
+/* Global */
+
+* {
     margin: 0;
     padding: 0;
+}
 
-    font-family: Arial, Helvetica, sans-serif
+body {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -14,33 +17,37 @@ section {
     display: block;
 }
 
+/* End Global */
+
+/* Navigation Bar */
+
 nav {
     display: block;
     background: #ee9933;
     position: relative;
-    height: 124px;
+    width: 100%;
 }
 
-ul {
+nav ul {
+    position: absolute;
     list-style-type: none;
-    display: inline;
-    float: right;
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
+    bottom: 50%;
+    right: 0%;
+    transform: translate(0, 50%);
 }
 
-li {
+nav li {
     display: inline;
     padding: 10px;
+    font-size: larger;
 }
 
-li a {
+nav li a {
     color: #000;
-    padding: 10px;
+    padding: 12px;
 }
 
-li a:hover {
+nav li a:hover {
     background-color: #aa5500;
     color: #fff;
 }
@@ -49,14 +56,35 @@ li a:hover {
     display: inline;
 }
 
+/* End Navigation Bar */
+
+/* Landing */
+
 .landing_image {
-    background-image: url("src/");
+    position: relative;
+    padding: 5px 0;
+    clip: auto;
 }
 
 .landing_image img {
     padding: 0;
     display: block;
     margin: 0 auto;
-    max-height: 100%;
-    max-width: 100%;
+    width: 100%;
+    height: 560px;
+    object-fit: cover;
 }
+
+.image_overlay {
+    position: absolute;
+    padding: 16px;
+    bottom: 15%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #fff;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-size: xx-large;
+}
+
+/* End Landing */
