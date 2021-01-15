@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    /* border: 2px solid red; */
 }
 
 body {
@@ -13,8 +14,23 @@ a {
     text-decoration: none;
 }
 
+h1 {
+
+}
+
 section {
-    display: block;
+    padding: 2% 14%;
+}
+
+section h2 {
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 1rem;
+}
+
+section p {
+    font-weight: 400;
+    font-size: 20px;
 }
 
 /* End Global */
@@ -28,26 +44,21 @@ nav {
     width: 100%;
 }
 
-nav ul {
+.navigation {
     position: absolute;
-    list-style-type: none;
     bottom: 50%;
     right: 0%;
     transform: translate(0, 50%);
 }
 
-nav li {
+.navigation a {
     display: inline;
-    padding: 10px;
+    color: #000;
+    padding: 12px;
     font-size: larger;
 }
 
-nav li a {
-    color: #000;
-    padding: 12px;
-}
-
-nav li a:hover {
+.navigation a:hover {
     background-color: #aa5500;
     color: #fff;
 }
@@ -60,13 +71,13 @@ nav li a:hover {
 
 /* Landing */
 
-.landing_image {
+.landing {
     position: relative;
-    padding: 5px 0;
     clip: auto;
+    padding: 5px 0;
 }
 
-.landing_image img {
+.landing img {
     padding: 0;
     display: block;
     margin: 0 auto;
@@ -75,7 +86,7 @@ nav li a:hover {
     object-fit: cover;
 }
 
-.image_overlay {
+.landing h1 {
     position: absolute;
     padding: 16px;
     bottom: 15%;
@@ -83,8 +94,99 @@ nav li a:hover {
     transform: translate(-50%, 0);
     background: #fff;
     text-transform: uppercase;
-    font-weight: 1000;
-    font-size: xx-large;
+    font-weight: bolder;
+    font-size: 38px;
+    text-shadow: 1px 0 #000;
+    letter-spacing: 1px;
 }
 
 /* End Landing */
+
+/* Recipes */
+
+.recipes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe_item {
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+
+.recipe_item img {
+    width: 100%;
+    max-height: 80%;
+    object-fit: cover;
+}
+
+.recipe_item p {
+    font-size: 100%;
+    text-align: center;
+    display: block;
+    background-color: #fff;
+}
+
+/* End Recipes */
+
+/* Footer */
+
+.footer {
+    position: relative;
+    background-color: #ee9933;
+    display: block;
+    height: 116px;
+    padding-left: 5%;
+}
+
+.footer p {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.footer ul {
+    position: absolute;
+    padding-right: 5%;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+.footer ul li {
+    display: inline;
+    list-style-type: none;
+    padding-right: 10px;
+}
+
+.footer a {
+    color: #000;
+}
+
+.footer a:hover {
+    color: #333;
+}
+
+/* End Footer */
+
+/* Extra */
+
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+}
+
+.grayed {
+    background-color: #bbb;
+}
+
+.spacer {
+    padding: 20px;
+}
+
+/* End Extra */
