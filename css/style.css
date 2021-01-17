@@ -3,34 +3,35 @@
 * {
     margin: 0;
     padding: 0;
-    /* border: 2px solid red; */
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 a {
     text-decoration: none;
 }
 
-h1 {
-
+section {
+    padding: 3% 10%;
 }
 
-section {
-    padding: 2% 14%;
+section:nth-child(even), .grayed {
+    background-color: #dbe5ef;
 }
 
 section h2 {
-    font-weight: bold;
+    font-weight: 900;
+    font-size: 2vw;
     text-transform: capitalize;
     padding-bottom: 1rem;
 }
 
 section p {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.5vw;
+    padding-bottom: 2rem;
 }
 
 /* End Global */
@@ -38,33 +39,29 @@ section p {
 /* Navigation Bar */
 
 nav {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: #ee9933;
-    position: relative;
-    width: 100%;
 }
 
 .navigation {
-    position: absolute;
-    bottom: 50%;
-    right: 0%;
-    transform: translate(0, 50%);
+    margin-right: 5%;
+}
+
+.logo {
+    margin-left: 5%;
 }
 
 .navigation a {
-    display: inline;
     color: #000;
     padding: 12px;
-    font-size: larger;
+    font-size: 1.25vw;
 }
 
 .navigation a:hover {
     background-color: #aa5500;
     color: #fff;
-}
-
-.logo {
-    display: inline;
 }
 
 /* End Navigation Bar */
@@ -78,9 +75,6 @@ nav {
 }
 
 .landing img {
-    padding: 0;
-    display: block;
-    margin: 0 auto;
     width: 100%;
     height: 560px;
     object-fit: cover;
@@ -90,17 +84,49 @@ nav {
     position: absolute;
     padding: 16px;
     bottom: 15%;
-    left: 50%;
-    transform: translate(-50%, 0);
+    right: 50%;
+    transform: translate(50%, 0);
     background: #fff;
     text-transform: uppercase;
-    font-weight: bolder;
-    font-size: 38px;
+    font-weight: 900;
+    font-size: 16px;
+    font-size: 2.5vw;
+    text-align: center;
     text-shadow: 1px 0 #000;
     letter-spacing: 1px;
 }
 
 /* End Landing */
+
+/* Categories */
+
+.categories {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.category_item {
+    text-align: center;
+    display: inline-block;
+    width: 30%;
+    height: 300px;
+}
+
+.category_item img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.category_item p {
+    display: block;
+    padding-top: 10px;
+    font-size: large;
+    font-weight: 700;
+}
+
+/* End Categories */
 
 /* Recipes */
 
@@ -111,54 +137,78 @@ nav {
 
 .recipe_item {
     text-align: center;
-    display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 20%;
 }
 
 .recipe_item img {
     width: 100%;
-    max-height: 80%;
+    height: 200px;
     object-fit: cover;
 }
 
 .recipe_item p {
-    font-size: 100%;
+    font-size: 1.25vw;
+    font-weight: 900;
+    padding-bottom: 0px;
+    padding-top: 10px;
     text-align: center;
-    display: block;
     background-color: #fff;
 }
 
 /* End Recipes */
 
+/* Places */
+
+.places {
+    display: flex;
+    justify-content: space-between;
+}
+
+.place {
+    width: 25%;
+}
+
+.place img {
+    width: 100%;
+    height: 228px;
+    object-fit: cover;
+}
+
+.place p {
+    font-size: medium;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.grayed {
+    padding: 5px;
+}
+
+/* End Places */
+
 /* Footer */
 
 .footer {
-    position: relative;
     background-color: #ee9933;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 116px;
-    padding-left: 5%;
 }
 
 .footer p {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
+    margin-left: 5%;
 }
 
 .footer ul {
-    position: absolute;
-    padding-right: 5%;
-    top: 50%;
-    right: 0;
-    transform: translate(0, -50%);
+    margin-right: 5%;
 }
 
 .footer ul li {
     display: inline;
     list-style-type: none;
-    padding-right: 10px;
+    font-size: 1vw;
+    padding-left: 10px;
 }
 
 .footer a {
@@ -179,14 +229,6 @@ nav {
     -khtml-user-select: none;
     -webkit-user-select: none;
     -o-user-select: none;
-}
-
-.grayed {
-    background-color: #bbb;
-}
-
-.spacer {
-    padding: 20px;
 }
 
 /* End Extra */
